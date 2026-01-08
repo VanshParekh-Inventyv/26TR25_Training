@@ -5,4 +5,6 @@
 - This directory contains the following directory:
     - 01_Flowcharts
     : This directory includes flowchart-related task work.
-    
+
+    - 03_SQL_Queries
+    : This directory includes SQL and DBMS related task work.
