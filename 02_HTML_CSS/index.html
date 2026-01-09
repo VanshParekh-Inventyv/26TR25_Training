@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexora – Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- URL targets -->
+    <span id="login" class="target"></span>
+    <span id="register" class="target"></span>
+
+    <div class="page">
+      <!-- BRANDING -->
+      <section class="left">
+        <div class="branding">
+          <div class="logo-box">
+            <img src="logo.png" alt="Nexora Logo" />
+          </div>
+          <h1>Nexora</h1>
+          <p>
+            "We're the wizards behind the curtain, conjuring flawless code and
+            banishing bugs. (No actual magic, just really smart people and
+            copious amounts of coffee.)
+          </p>
+        </div>
+      </section>
+
+      <!-- AUTH -->
+      <section class="right">
+        <div class="auth-card">
+          <div class="tabs">
+            <a href="#login" class="tab login-tab">Login</a>
+            <a href="#register" class="tab register-tab">Register</a>
+          </div>
+
+          <div class="content">
+            <div class="panel login-panel">
+              <input type="text" placeholder="Username" />
+              <input type="password" placeholder="Password" />
+              <div class="auth-links">
+                <a href="#">Forgot password?</a>
+              </div>
+              <button>Login</button>
+            </div>
+
+            <div class="panel register-panel">
+              <input type="text" placeholder="Username" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <div class="auth-links">
+                <span>Already have an account?</span>
+                <a href="#login">Login</a>
+              </div>
+              <button>Register</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
