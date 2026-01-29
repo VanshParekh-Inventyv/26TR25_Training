@@ -14,3 +14,6 @@
 
     - `04_JavaScript`
     : This directory includes JavaScript related task work.
+
+    - `05_Angular`
+    : This directory includes Angular tasks and assignments.

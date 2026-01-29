@@ -1,0 +1,33 @@
+* {
+    background-color: black;
+    color: greenyellow; 
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* Input box styles */
+input {
+    border: none;
+    width: 50%;
+    margin-left: 1%;
+    outline: none;
+    background-color: black;
+    color: greenyellow;
+    padding: 2px 4px;
+}
+
+/* Terminal container */
+.terminal {
+    padding: 10px;
+}
+
+.output p {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.error {
+    color: red;
+}

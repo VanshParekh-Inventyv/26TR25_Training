@@ -1,0 +1,37 @@
+<app-commands-list-component />
+
+<div class="output">
+  @for (item of history; track $index) {
+    <div>$ {{ item.command }}</div>
+
+    @if (item.description) {
+      <p>{{ item.description }}</p>
+      <p>{{ item.explanation }}</p>
+
+      <ul>
+        @for (msg of item.success; track msg) {
+          <li>{{ msg }}</li>
+        }
+      </ul>
+    }
+
+    @if (item.error) {
+      <div class="error">{{ item.error }}</div>
+    }
+  }
+</div>
+
+<div class="terminal">
+  <form (ngSubmit)="onEnter()">
+    <label for="cmdInput">
+      $
+      <input
+        id="cmdInput"
+        type="text"
+        [(ngModel)]="inputCmd"
+        name="cmdInput"
+        autofocus
+      />
+    </label>  
+  </form>
+</div>
