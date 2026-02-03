@@ -1,0 +1,11 @@
+<!-- this is to display the commands list -->
+<div class="command-card-list">
+  @for (cmd of angularCommands; track $index) {
+    <p>
+      {{ cmd.command }}
+      @if (cmd.alias !== null) {
+        or {{ cmd.alias }}
+      }
+    </p>
+  }
+</div>
