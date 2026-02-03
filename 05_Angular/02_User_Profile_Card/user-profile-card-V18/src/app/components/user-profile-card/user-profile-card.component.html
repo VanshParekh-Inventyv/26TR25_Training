@@ -1,0 +1,26 @@
+<mat-card [ngClass]="status ? 'green' : 'red'">
+  <mat-card-header>
+    <img mat-card-avatar [src]="userData.avatarImgUrl" alt="Avatar Image" />
+  </mat-card-header>
+  <mat-card-content>
+    <p>name: {{ userData.name }}</p>
+    <p>Age: {{ userData.age }}</p>
+  </mat-card-content>
+
+  <form>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        [(ngModel)]="userName"
+        (ngModelChange)="onNameChange($event)"
+        name="userName"
+        [disabled]="!status"
+      />
+    </mat-form-field>
+  </form>
+
+  <button matButton [disabled]="!userData.name" (click)="onClick()">
+    {{ status ? "Active" : "Inactive" }}
+  </button>
+</mat-card>

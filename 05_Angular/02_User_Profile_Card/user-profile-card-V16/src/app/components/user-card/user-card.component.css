@@ -1,0 +1,24 @@
+mat-card {
+  width: 25vw; /* 25% of viewport width */
+  padding: 2vh 2vw; /* vertical and horizontal padding relative to viewport */
+  margin: auto;
+  border: 0.5em solid transparent;
+  position: relative; /* to safely use top */
+  top: 5vh; /* 5% of viewport height from top */
+  box-sizing: border-box; /* include padding and border in width */
+}
+
+img {
+  width: 5em; /* relative to font-size, keeps avatar consistent */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* horizontally center the image */
+}
+
+mat-card.green {
+  border-color: green;
+}
+
+mat-card.red {
+  border-color: red;
+}
