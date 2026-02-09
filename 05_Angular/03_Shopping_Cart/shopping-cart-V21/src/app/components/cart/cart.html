@@ -1,0 +1,43 @@
+@if (cart().length) {
+  <mat-card>
+    <mat-list>
+      @for (item of cart(); track $index) {
+        <mat-list-item>
+          <div class="cart-item">
+            <span class="name">{{ item.product.name }}</span>
+
+            <div class="quantity-controls">
+              <button
+                mat-mini-fab
+                color="primary"
+                [disabled]="item.count === 1"
+                (click)="decrement(item.product.id)"
+              >
+                −
+              </button>
+
+              <span class="quantity">{{ item.count }}</span>
+
+              <button mat-mini-fab color="primary" (click)="increment(item.product.id)">+</button>
+            </div>
+
+            <span class="price">₹{{ item.product.price * item.count }}</span>
+
+            <button mat-icon-button color="warn" (click)="remove(item.product.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-list-item>
+      }
+    </mat-list>
+
+    <mat-divider></mat-divider>
+
+    <div class="cart-footer">
+      <h3>Total: ₹{{ total() }}</h3>
+      <button mat-raised-button color="warn" (click)="clear()">Clear Cart</button>
+    </div>
+  </mat-card>
+} @else {
+  <p class="empty">Your cart is empty.</p>
+}

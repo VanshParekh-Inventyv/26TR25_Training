@@ -1,0 +1,21 @@
+mat-card {
+  width: 16vw;
+  height: auto;
+  margin: 1em;
+  border: 0.1em solid blue;
+  border-radius: 2%;
+}
+
+mat-card img {
+  height: 50%;
+  width: auto;
+}
+
+h1 {
+  font-size: large;
+}
+
+button {
+  width: 75%;
+  margin: auto;
+}

@@ -1,0 +1,8 @@
+.product-card {
+  width: 16vw;
+  border: 0.2em solid blue;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: left;
+  margin: 16px;
+}
