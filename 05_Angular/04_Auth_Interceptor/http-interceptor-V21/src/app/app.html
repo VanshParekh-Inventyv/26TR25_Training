@@ -1,0 +1,54 @@
+<mat-card class="main-card">
+  <h2>Angular Auth Interceptor</h2>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>username</mat-label>
+    <input matInput [(ngModel)]="username" disabled />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>password</mat-label>
+    <input matInput [(ngModel)]="password" disabled />
+  </mat-form-field>
+
+  <div class="button-group">
+    <button mat-raised-button color="primary" (click)="generateToken()">Generate Token</button>
+
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+
+    <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+  </div>
+
+  @if (token()) {
+    <mat-card class="result-card">
+      <h3>Generated Token:</h3>
+      <p class="token-text">{{ token() }}</p>
+    </mat-card>
+  }
+
+  @if (errorMessage()) {
+    <p class="error-text">
+      {{ errorMessage() }}
+    </p>
+  }
+
+  @if (userData()) {
+    <mat-card class="result-card">
+      <mat-card-header>
+        <img mat-card-avatar [src]="userData()!.image" alt="User Avatar" />
+
+        <mat-card-title> {{ userData()!.firstName }} {{ userData()!.lastName }} </mat-card-title>
+
+        <mat-card-subtitle>
+          {{ userData()!.email }}
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p><strong>User ID:</strong> {{ userData()!.id }}</p>
+        <p><strong>Username:</strong> {{ userData()!.username }}</p>
+        <p><strong>Gender:</strong> {{ userData()!.gender }}</p>
+      </mat-card-content>
+    </mat-card>
+  }
+</mat-card>

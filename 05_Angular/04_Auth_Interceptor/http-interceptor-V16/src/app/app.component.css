@@ -1,0 +1,38 @@
+/* Center card on page */
+.main-card {
+  max-width: 37.5rem; /* 600px → 37.5rem */
+  margin: 2.5rem auto; /* 40px → 2.5rem */
+  padding: 1.25rem; /* 20px → 1.25rem */
+}
+
+/* Make form fields full width */
+.full-width {
+  width: 100%;
+  margin-bottom: 0.9375rem; /* 15px → 0.9375rem */
+}
+
+/* Button spacing */
+.button-group {
+  margin-top: 1.25rem; /* 20px → 1.25rem */
+  display: flex;
+  gap: 0.625rem; /* 10px → 0.625rem */
+  flex-wrap: wrap;
+}
+
+/* Result section */
+.result-card {
+  margin-top: 1.25rem; /* 20px → 1.25rem */
+  padding: 0.9375rem; /* 15px → 0.9375rem */
+}
+
+/* Token text wrap properly */
+.token-text {
+  word-break: break-all;
+  font-size: 0.75rem; /* 12px → 0.75rem */
+}
+
+.error-text {
+  margin-top: 1rem;
+  color: #d32f2f;
+  font-weight: 500;
+}
